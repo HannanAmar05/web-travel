@@ -6,6 +6,7 @@ import IconTraveler from "assets/image/Icons/ic_traveler.svg";
 import IconTreasure from "assets/image/Icons/ic_treasure.svg";
 import Button from "elements/Button";
 import Formating from "utils/FormatNumber";
+import { Fade } from 'react-reveal'
 
 export default function Hero(props) {
   function showMostPicked() {
@@ -17,6 +18,7 @@ export default function Hero(props) {
   
 
   return (
+    <Fade bottom>
     <section className="container pt-4">
       <div className="row align-items-center">
         <div className="col-auto pr-5" style={{ width: 530 }}>
@@ -101,5 +103,6 @@ export default function Hero(props) {
         </div>
       </div>
     </section>
+    </Fade>
   );
 }
