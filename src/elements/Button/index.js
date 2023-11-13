@@ -8,7 +8,6 @@ export default function Button(props) {
   if (props.isSmall) className.push("btn-sm");
   if (props.isBlock) className.push("btn-block");
   if (props.hasShadow) className.push("btn-shadow");
-  if (props.isPrimary) className.push("btn-primary");
 
   const onClick = () => {
     if (props.onClick) props.onClick();
@@ -20,7 +19,7 @@ export default function Button(props) {
       <span className={className.join(" ")} style={props.style}>
         {props.isLaoding ? (
           <>
-            <span className="spinner-border spinner-border-sm m5-5"></span>
+            <span className="spinner-border spinner-border-sm mx-5"></span>
             <span className="sr-only">Loading...</span>
           </>
         ) : (
@@ -31,7 +30,7 @@ export default function Button(props) {
   }
 
   if (props.type === "link") {
-    if (props.isExeternal) {
+    if (props.isExternal) {
       return (
         <a
           href={props.href}
@@ -58,7 +57,6 @@ export default function Button(props) {
   }
   return (
     <button
-      to={props.href}
       className={className.join(" ")}
       style={props.style}
       onClick={onClick}
